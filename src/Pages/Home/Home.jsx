@@ -6,24 +6,24 @@ import "./Home.css"
 
 export const Home = () => {
   return (
-    <div className='w-100 slider m-auto shadowbottom'>
-      <Carousel controls={false}>
+    // <div className='slider shadowbottom'>
+    <Carousel className='slider shadowbottom' controls={false}>
       <Carousel.Item>
         <img
-          className="d-block h-100 carrousel-img"
+          className="carrousel-img"
           src={slider2}
           alt="First slide"
         />
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item >
         <img
-          className="d-block h-100 carrousel-img"
+          className="carrousel-img"
           src={slider3}
           alt="Second slide"
         />
       </Carousel.Item>
     </Carousel>
 
-    </div>
+    // </div>
   )
 }

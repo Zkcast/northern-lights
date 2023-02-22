@@ -16,7 +16,7 @@ export const VideoSection = () => {
 
     return (
         <Row className='videoSection p-5 shadowtop'>
-            <Col className='video'>
+            <Col className='video d-flex justify-content-center my-2'>
                 <video className='video rounded-circle' loop autoPlay muted id='video' controls={false} onClick={handleVideoClick}>
                     <source src={video} type="video/mp4" />
                     Tu navegador no soporta la reproducción de videos.
