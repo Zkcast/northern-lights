@@ -1,6 +1,6 @@
 import React from 'react'
-import photo from '../../Assets/slider/photo.jpg'
-import photo2 from '../../Assets/slider/photo2.jpg'
+import slider2 from '../../Assets/slider/slider2.jpg'
+import slider3 from '../../Assets/slider/slider3.jpg'
 import Carousel from 'react-bootstrap/Carousel';
 import "./Home.css"
 
@@ -11,14 +11,14 @@ export const Home = () => {
       <Carousel.Item>
         <img
           className="d-block h-100 carrousel-img"
-          src={photo2}
+          src={slider2}
           alt="First slide"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block h-100 carrousel-img"
-          src={photo}
+          src={slider3}
           alt="Second slide"
         />
       </Carousel.Item>
