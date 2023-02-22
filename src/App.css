@@ -28,6 +28,9 @@
 }
 
 
+.cambio-color {
+  animation: cambio-color 6s linear infinite;
+}
 
 @keyframes cambio-color {
   0% {

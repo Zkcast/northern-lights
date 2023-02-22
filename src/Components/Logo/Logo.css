@@ -3,17 +3,18 @@
     .logo {
         width: 230px;
         padding: 1vh;
+        margin-top: -1vh;
     }
     
 }
 
 .logo {
     top: -2vh;
-    left: -2vh;
+    left: 0vh;
     z-index: 1;
     color: white;
     filter: hue-rotate(0deg);
     position: fixed;
-    animation: cambio-color 6s linear infinite;
+    animation: cambio-color 5.5s linear infinite;
     transition: all 1s;
 }

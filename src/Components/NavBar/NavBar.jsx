@@ -24,14 +24,14 @@ export const NavBar = () => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         }
-        
+
     }, []);
 
 
     return (
         <React.Fragment>
-            <div className={`${!scrolled && 'scrolled'} navbar_custom shadowbottom`}>
-                <nav className={`navbar bg-transparent navbar-expand-lg navbar-light bg-light d-flex justify-content-end`}>
+            <div className={`${!scrolled && 'scrolled'} navbar_custom `}>
+                <nav className={` navbar bg-transparent navbar-expand-lg navbar-light bg-light d-flex justify-content-end`}>
 
                     <div className='d-flex justify-content-end'>
                         <button className="navbar-toggler mx-3 navbar-dark" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +39,7 @@ export const NavBar = () => {
                         </button>
                     </div>
 
-                    <div className={`${scrolled && 'collapse'} collapse navbar-collapse px-3 mx-3 text-end justify-content-end navbar-items`} id="navbarNav">
+                    <div className={`${scrolled && 'collapse'} collapse navbar-collapse px-3 mx-5 text-end justify-content-end navbar-items`} id="navbarNav">
                         <ul className="navbar-nav d-flex justify-content-end navbarItems">
                             <li className="d-flex justify-content-end navItem" onClick={() => setSelected('home')}>
                                 <Link to='/' className="nav-link"><span className={selected === 'home' ? 'neon' : 'navitem'}>Home</span></Link>
