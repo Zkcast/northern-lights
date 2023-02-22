@@ -8,6 +8,7 @@ import { NavBar } from './Components/NavBar/NavBar';
 import { Details } from './Pages/Details/Details';
 import { VideoSection } from './Pages/VideoSection/VideoSection';
 import { Whatsapp } from './Components/Whatsapp/Whatsapp';
+import { Footer } from './Components/Footer/Footer';
 import { Logo } from './Components/Logo/Logo';
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
       
       <Contact></Contact>
       <Whatsapp></Whatsapp>
+      <Footer></Footer>
       {/* <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/" element={<Contact />} />

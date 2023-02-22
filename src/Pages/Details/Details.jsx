@@ -10,8 +10,8 @@ export const Details = () => {
             </Row>
             <Row className='mb-0 mt-5'>
                 <Col>
-                    <button type="button" class="btn btn-outline-dark border-2 mx-5 px-5">Mercado Libre</button>
-                    <button type="button" class="btn btn-outline-dark border-2 mx-5 px-5">Conoce nuestras tiendas</button>
+                    <button type="button" className="btn btn-outline-dark mx-5 px-5 my-1">Mercado Libre</button>
+                    <button type="button" className="btn btn-outline-dark mx-5 px-5 my-1">Conoce nuestras tiendas</button>
                 </Col>
             </Row>
 

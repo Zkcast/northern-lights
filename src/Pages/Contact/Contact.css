@@ -5,3 +5,7 @@
 .footer h5 {
     color: #ffffff
 }
+
+::placeholder {
+    font-size: 0.9em;
+  }
