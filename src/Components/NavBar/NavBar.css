@@ -46,8 +46,8 @@
 
 .navItem{
     animation: cambio-color 6s linear infinite;
-
 }
+
 @media (max-width:991.98px) {
     .navbarItems {
         background-color: rgba(0, 0, 0, 0.666);
