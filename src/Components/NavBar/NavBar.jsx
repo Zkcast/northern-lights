@@ -28,11 +28,13 @@ export const NavBar = () => {
 
         return (
             <div className={`${!scrolled && 'scrolled'} navbar_custom shadowbottom`}>
-                <nav className="navbar bg-transparent navbar-expand-lg navbar-light bg-light py-3">
+                <nav className="navbar bg-transparent navbar-expand-lg navbar-light bg-light py-3" >
                     <img className='logo mx-0 px-0' width='250px' src={logoverde}></img>
+                    
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
+
                     <div className="collapse navbar-collapse px-3 mx-3 d-flex justify-content-end navbar-items" id="navbarNav">
                         <ul className="navbar-nav text-xl">
                             <li className="nav-item" onClick={() => setSelected('home')}>
