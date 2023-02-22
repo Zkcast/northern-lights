@@ -31,7 +31,7 @@
     background-color: rgba(0, 0, 0, 0.529);
     backdrop-filter: blur(10px);
     z-index: 1;
-    transition: all 1s
+    transition: all 1.1s
 }
 
 .scrolled {
