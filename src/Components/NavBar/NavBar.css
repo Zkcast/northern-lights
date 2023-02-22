@@ -51,16 +51,18 @@
 
 
 .navbar_custom {
-    background-color: #00000093;
+    background-color: #000000b4;
     backdrop-filter: blur(2px);
     position: fixed;
     top: 0;
     min-width: 100%;
     z-index: 1;
+    transition: all 1.5s;
 }
 
 .scrolled {
     background-color: #00000093;
+    opacity: 0;
 }
 
 /* .navbar-items {

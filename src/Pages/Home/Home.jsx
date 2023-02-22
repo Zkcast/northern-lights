@@ -1,5 +1,5 @@
 import React from 'react'
-import photo from '../../Assets/slider/photo.jpg'
+import photo from '../../Assets/slider/photo.JPG'
 import photo2 from '../../Assets/slider/photo2.JPG'
 import Carousel from 'react-bootstrap/Carousel';
 import "./Home.css"
