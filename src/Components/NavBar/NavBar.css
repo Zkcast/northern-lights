@@ -1,63 +1,37 @@
-@keyframes cambio-color {
-    0% {
-        filter: hue-rotate(0deg);
-        /* Verde */
-    }
-
-    25% {
-        filter: hue-rotate(90deg);
-        /* Violeta */
-    }
-
-    50% {
-        filter: hue-rotate(180deg);
-        /* Amarillo */
-    }
-
-    75% {
-        filter: hue-rotate(270deg);
-        /* Naranja */
-    }
-
-    100% {
-        filter: hue-rotate(360deg);
-        /* Vuelve al verde */
-    }
-}
-
 .neon {
     /* font-family: 'Arial', sans-serif; */
-    font-size: 20px;
+    font-size: 16px;
     color: #fff;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.6),
         0 0 20px rgba(255, 255, 255, 0.6);
     text-align: center;
+    border-bottom: 0.5vh;
+    border-color: rgba(255, 0, 183, 0.697);
+    border-style: solid;
+    border-right: none;
+    border-left: none;
+    border-top: none;
 }
 
 .navitem:hover {
     color: rgb(255, 255, 255)
 }
 
-.logo {
-    filter: hue-rotate(0deg);
-    position: absolute;
-    /* Iniciamos con el color original */
-    animation: cambio-color 6s linear infinite;
-}
-
 .navitem {
     color: rgba(255, 255, 255, 0.474);
 }
 
-
 .navbar_custom {
-    background-color: #000000b4;
-    backdrop-filter: blur(2px);
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     min-width: 100%;
+    height: 55px;
+    background-color: rgba(0, 0, 0, 0.529);
+    backdrop-filter: blur(10px);
     z-index: 1;
-    transition: all 1.5s;
+    transition: all 1s
 }
 
 .scrolled {

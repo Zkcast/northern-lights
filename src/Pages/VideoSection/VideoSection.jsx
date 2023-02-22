@@ -15,7 +15,7 @@ export const VideoSection = () => {
     }
 
     return (
-        <Row className='videoSection p-5'>
+        <Row className='videoSection p-5 shadowtop'>
             <Col className='video'>
                 <video className='video rounded-circle' loop autoPlay muted id='video' controls={false} onClick={handleVideoClick}>
                     <source src={video} type="video/mp4" />

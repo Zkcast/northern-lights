@@ -8,14 +8,16 @@ import { NavBar } from './Components/NavBar/NavBar';
 import { Details } from './Pages/Details/Details';
 import { VideoSection } from './Pages/VideoSection/VideoSection';
 import { Whatsapp } from './Components/Whatsapp/Whatsapp';
+import { Logo } from './Components/Logo/Logo';
 function App() {
 
 
 
   return (
     <div className="App">
-      <NavBar></NavBar>
 
+      <NavBar></NavBar>
+      <Logo></Logo>
       <Home></Home>
       <Details></Details>
 
