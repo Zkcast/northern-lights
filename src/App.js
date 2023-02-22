@@ -1,24 +1,36 @@
 import logo from './logo.svg';
 import './App.css';
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Contact } from './Pages/Contact/Contact';
+import { Home } from './Pages/Home/Home';
+import { Link } from 'react-router-dom';
+import { NavBar } from './Components/NavBar/NavBar';
+import { Details } from './Pages/Details/Details';
+import { VideoSection } from './Pages/VideoSection/VideoSection';
+import { Whatsapp } from './Components/Whatsapp/Whatsapp';
 function App() {
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <NavBar></NavBar>
+
+      <Home></Home>
+      <Details></Details>
+
+      <VideoSection></VideoSection>
+      
+      <Contact></Contact>
+      <Whatsapp></Whatsapp>
+      {/* <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Contact />} />
+           <Route path="/skills" element={<Skills />} />
+          <Route path="/proyects" element={<Proyects />} />
+          <Route path="/proyects/:id" element={<ModalContent />} />
+        </Routes> */}
+    </div >
   );
 }
 

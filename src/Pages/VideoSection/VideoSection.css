@@ -1,0 +1,10 @@
+.videoSection{
+    background-color: rgba(34, 17, 25, 1);
+}
+
+.video{
+    width: 350px;
+    height: 350px;
+    object-fit: fill;
+
+}
