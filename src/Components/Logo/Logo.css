@@ -1,8 +1,11 @@
-/* .logo {
-    filter: hue-rotate(0deg);
-    position: absolute;
-    animation: cambio-color 6s linear infinite;
-}*/
+@media (max-width:991.98px) {
+
+    .logo {
+        width: 230px;
+        padding: 1vh;
+    }
+    
+}
 
 .logo {
     top: -2vh;
@@ -12,31 +15,5 @@
     filter: hue-rotate(0deg);
     position: fixed;
     animation: cambio-color 6s linear infinite;
-}
-
-@keyframes cambio-color {
-    0% {
-        filter: hue-rotate(0deg);
-        /* Verde */
-    }
-
-    25% {
-        filter: hue-rotate(90deg);
-        /* Violeta */
-    }
-
-    50% {
-        filter: hue-rotate(180deg);
-        /* Amarillo */
-    }
-
-    75% {
-        filter: hue-rotate(270deg);
-        /* Naranja */
-    }
-
-    100% {
-        filter: hue-rotate(360deg);
-        /* Vuelve al verde */
-    }
+    transition: all 1s;
 }

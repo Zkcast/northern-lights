@@ -42,3 +42,22 @@
 /* .navbar-items {
     text-end
 } */
+
+.navItem{
+    animation: cambio-color 6s linear infinite;
+
+}
+@media (max-width:991.98px) {
+    .navbarItems {
+        background-color: rgba(0, 0, 0, 0.666);
+        backdrop-filter: blur(50px);
+        padding: 1vh;
+        margin-top: 2vh;
+        border-radius: 1vh;
+    }
+
+    .navItem {
+        padding: 0.5vh;
+    }
+    
+}
