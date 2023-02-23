@@ -10,21 +10,28 @@ import { VideoSection } from './Pages/VideoSection/VideoSection';
 import { Whatsapp } from './Components/Whatsapp/Whatsapp';
 import { Footer } from './Components/Footer/Footer';
 import { Logo } from './Components/Logo/Logo';
+import { useRef } from 'react';
+
 function App() {
 
+  const contactRef = useRef(null)
 
+  const scrollToContact = () => {
+    contactRef.current.scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
     <div className="App">
 
-      <NavBar></NavBar>
+      <NavBar scrollToContact={scrollToContact}></NavBar>
       <Logo></Logo>
       <Home></Home>
       <Details></Details>
 
       <VideoSection></VideoSection>
-      
-      <Contact></Contact>
+      <div ref={contactRef}>
+        <Contact></Contact>
+      </div>
       <Whatsapp></Whatsapp>
       <Footer></Footer>
       {/* <Routes>

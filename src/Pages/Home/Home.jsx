@@ -8,18 +8,18 @@ export const Home = () => {
   return (
     // <div className='slider shadowbottom'>
     <Carousel className='slider shadowbottom' controls={false}>
-      <Carousel.Item>
-        <img
-          className="carrousel-img"
-          src={slider2}
-          alt="First slide"
-        />
-      </Carousel.Item>
       <Carousel.Item >
         <img
           className="carrousel-img"
           src={slider3}
           alt="Second slide"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="carrousel-img"
+          src={slider2}
+          alt="First slide"
         />
       </Carousel.Item>
     </Carousel>

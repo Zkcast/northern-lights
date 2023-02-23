@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import './NavBar.css'
 import { Link } from 'react-router-dom'
 
-export const NavBar = () => {
+export const NavBar = (props) => {
 
 
     const [selected, setSelected] = useState('home')
@@ -18,15 +18,17 @@ export const NavBar = () => {
                 setScrolled(true);
             }
         }
-
         window.addEventListener('scroll', handleScroll);
-
         return () => {
             window.removeEventListener('scroll', handleScroll);
         }
-
     }, []);
 
+
+    const handleClickContact = () => {
+        setSelected('contact')
+        props.scrollToContact()
+    } 
 
     return (
         <React.Fragment>
@@ -44,10 +46,10 @@ export const NavBar = () => {
                             <li className="d-flex justify-content-end navItem" onClick={() => setSelected('home')}>
                                 <Link to='/' className="nav-link"><span className={selected === 'home' ? 'neon' : 'navitem'}>Home</span></Link>
                             </li>
-                            <li className="d-flex justify-content-end navItem" onClick={() => setSelected('contact')}>
-                                <Link to='/contact' className="nav-link"><span className={selected === 'contact' ? 'neon' : 'navitem'}>Contacto</span></Link>
+                            <li className="d-flex justify-content-end navItem" onClick={handleClickContact }>
+                                <Link to='/' className="nav-link"><span className={selected === 'contact' ? 'neon' : 'navitem'}>Contacto</span></Link>
                             </li>
-                            <Link to='/priceme' className="nav-link">
+                            <Link to='/' className="nav-link">
                                 <li className="d-flex justify-content-end navItem" onClick={() => setSelected('price')}>
                                     <span className={selected === 'price' ? 'neon' : 'navitem'}>Presupuesto</span>
                                 </li>
