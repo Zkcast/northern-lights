@@ -1,10 +1,11 @@
 .App {
   text-align: center;
-  background-color: #232529;
+  background: linear-gradient(135deg, #0f0520 0%, #1a0a2e 50%, #232529 100%);
   height: 50vh;
   width: 100%;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Inter', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   position: absolute;
+  transition: all 0.3s ease;
 }
 
 .App-logo {
@@ -19,42 +20,54 @@
 }
 
 .shadowbottom {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.3),
+    0 8px 20px rgba(255, 0, 183, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.shadowbottom:hover {
+  box-shadow:
+    0 6px 12px rgba(0, 0, 0, 0.4),
+    0 12px 30px rgba(255, 0, 183, 0.25);
 }
 
 .shadowtop {
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.5);
-
+  box-shadow:
+    0 -4px 6px rgba(0, 0, 0, 0.3),
+    0 -8px 20px rgba(183, 0, 255, 0.15);
+  transition: box-shadow 0.3s ease;
 }
 
+.shadowtop:hover {
+  box-shadow:
+    0 -6px 12px rgba(0, 0, 0, 0.4),
+    0 -12px 30px rgba(183, 0, 255, 0.25);
+}
 
 .cambio-color {
-  animation: cambio-color 6s linear infinite;
+  animation: cambio-color 8s ease-in-out infinite;
+  transition: all 0.3s ease;
 }
 
 @keyframes cambio-color {
   0% {
-      filter: hue-rotate(0deg);
-      /* Verde */
+    filter: hue-rotate(0deg) brightness(1);
   }
 
   25% {
-      filter: hue-rotate(90deg);
-      /* Violeta */
+    filter: hue-rotate(90deg) brightness(1.1);
   }
 
   50% {
-      filter: hue-rotate(180deg);
-      /* Amarillo */
+    filter: hue-rotate(180deg) brightness(1);
   }
 
   75% {
-      filter: hue-rotate(270deg);
-      /* Naranja */
+    filter: hue-rotate(270deg) brightness(1.1);
   }
 
   100% {
-      filter: hue-rotate(360deg);
-      /* Vuelve al verde */
+    filter: hue-rotate(360deg) brightness(1);
   }
 }

@@ -52,7 +52,7 @@ export const Contact = () => {
         e.preventDefault();
         setFormdata({ loading: true });
 
-        const templateParams = { 
+        const templateParams = {
             from_name: formData.email,
             user_name: formData.name,
             user_lastname: formData.lastname,
@@ -107,7 +107,7 @@ export const Contact = () => {
 
     return (
 
-        <Container className=" p-4">
+        <Container fluid className="p-4 footer">
             <Row className="d-flex justify-content-around">
                 <Col lg={6} className='text-center m-auto'>
                     <h3>Contactanos!</h3>

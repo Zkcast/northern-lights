@@ -1,0 +1,18 @@
+.details-section {
+    background: linear-gradient(135deg, #0a0015 0%, #1a0a2e 50%, #16213e 100%);
+    color: #ffffff;
+    min-height: 40vh;
+}
+
+.details-section .btn-outline-dark {
+    color: #ffffff;
+    border-color: rgba(255, 0, 183, 0.5);
+    transition: all 0.3s ease;
+}
+
+.details-section .btn-outline-dark:hover {
+    background: linear-gradient(135deg, rgba(255, 0, 183, 0.2), rgba(183, 0, 255, 0.2));
+    border-color: rgba(255, 0, 183, 0.8);
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(255, 0, 183, 0.4);
+}

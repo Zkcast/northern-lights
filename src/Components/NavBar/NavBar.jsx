@@ -28,7 +28,12 @@ export const NavBar = (props) => {
     const handleClickContact = () => {
         setSelected('contact')
         props.scrollToContact()
-    } 
+    }
+
+    const handleClickGallery = () => {
+        setSelected('gallery')
+        props.scrollToGallery()
+    }
 
     return (
         <React.Fragment>
@@ -46,7 +51,10 @@ export const NavBar = (props) => {
                             <li className="d-flex justify-content-end navItem" onClick={() => setSelected('home')}>
                                 <Link to='/' className="nav-link"><span className={selected === 'home' ? 'neon' : 'navitem'}>Home</span></Link>
                             </li>
-                            <li className="d-flex justify-content-end navItem" onClick={handleClickContact }>
+                            <li className="d-flex justify-content-end navItem" onClick={handleClickGallery}>
+                                <Link to='/' className="nav-link"><span className={selected === 'gallery' ? 'neon' : 'navitem'}>Galería</span></Link>
+                            </li>
+                            <li className="d-flex justify-content-end navItem" onClick={handleClickContact}>
                                 <Link to='/' className="nav-link"><span className={selected === 'contact' ? 'neon' : 'navitem'}>Contacto</span></Link>
                             </li>
                             <Link to='/' className="nav-link">

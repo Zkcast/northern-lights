@@ -1,10 +1,31 @@
-.videoSection{
-    background-color: rgba(34, 17, 25, 1);
+.videoSection {
+    background: linear-gradient(135deg, #0a0015 0%, rgba(34, 17, 25, 1) 50%, #16213e 100%);
+    padding: 4rem 0;
+    position: relative;
 }
 
-.video{
+.videoSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 0, 183, 0.3),
+            rgba(183, 0, 255, 0.3),
+            rgba(255, 0, 183, 0.3),
+            transparent);
+}
+
+.video {
     width: 350px;
     height: 350px;
     object-fit: fill;
-    /* animation: cambio-color 6s linear infinite; */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.video:hover {
+    transform: scale(1.05) translateY(-5px);
 }

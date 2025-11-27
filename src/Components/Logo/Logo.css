@@ -1,20 +1,23 @@
-@media (max-width:991.98px) {
+.logo {
+    top: -2vh;
+    left: 0vh;
+    z-index: 1001;
+    color: white;
+    filter: hue-rotate(0deg) drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+    position: fixed;
+    animation: cambio-color 8s ease-in-out infinite;
+    transition: all 0.4s ease;
+}
 
+.logo:hover {
+    filter: hue-rotate(0deg) drop-shadow(0 0 20px rgba(255, 0, 183, 0.6));
+    transform: scale(1.05);
+}
+
+@media (max-width:991.98px) {
     .logo {
         width: 230px;
         padding: 1vh;
         margin-top: -1vh;
     }
-    
-}
-
-.logo {
-    top: -2vh;
-    left: 0vh;
-    z-index: 1;
-    color: white;
-    filter: hue-rotate(0deg);
-    position: fixed;
-    animation: cambio-color 5.5s linear infinite;
-    transition: all 1s;
 }
