@@ -4,13 +4,7 @@ import './Gallery.css';
 
 // Importar imágenes
 import img1 from '../../Assets/content/Northern Lights Neon-20251127T164416Z-1-001/Northern Lights Neon/Fotos Carteles/GOPR0653.JPG';
-import img2 from '../../Assets/content/Northern Lights Neon-20251127T164416Z-1-001/Northern Lights Neon/Fotos Carteles/GOPR0654.JPG';
-import img3 from '../../Assets/content/Northern Lights Neon-20251127T164416Z-1-001/Northern Lights Neon/Fotos Carteles/GOPR0655.JPG';
-import img4 from '../../Assets/content/Northern Lights Neon-20251127T164416Z-1-001/Northern Lights Neon/Fotos Carteles/GOPR0656.JPG';
-import img5 from '../../Assets/content/Northern Lights Neon-20251127T164416Z-1-001/Northern Lights Neon/Fotos Carteles/GOPR0657.JPG';
-import img6 from '../../Assets/content/Northern Lights Neon-20251127T164416Z-1-001/Northern Lights Neon/Fotos Carteles/GOPR0768.JPG';
-import img7 from '../../Assets/content/Northern Lights Neon-20251127T164416Z-1-001/Northern Lights Neon/Fotos Carteles/GOPR0769.JPG';
-import img8 from '../../Assets/content/Northern Lights Neon-20251127T164416Z-1-001/Northern Lights Neon/Fotos Carteles/GOPR0770.JPG';
+
 
 export const Gallery = () => {
     const [showModal, setShowModal] = useState(false);
@@ -18,13 +12,13 @@ export const Gallery = () => {
 
     const galleryImages = [
         { id: 1, src: img1, title: 'Cartel Neon Personalizado' },
-        { id: 2, src: img2, title: 'Diseño Neon Custom' },
-        { id: 3, src: img3, title: 'Iluminación Neon' },
-        { id: 4, src: img4, title: 'Letrero Neon' },
-        { id: 5, src: img5, title: 'Arte Neon' },
-        { id: 6, src: img6, title: 'Cartel LED Neon' },
-        { id: 7, src: img7, title: 'Neon Decorativo' },
-        { id: 8, src: img8, title: 'Diseño Luminoso' }
+        { id: 2, src: img1, title: 'Diseño Neon Custom' },
+        { id: 3, src: img1, title: 'Iluminación Neon' },
+        { id: 4, src: img1, title: 'Letrero Neon' },
+        { id: 5, src: img1, title: 'Arte Neon' },
+        { id: 6, src: img1, title: 'Cartel LED Neon' },
+        { id: 7, src: img1, title: 'Neon Decorativo' },
+        { id: 8, src: img1, title: 'Diseño Luminoso' }
     ];
 
     const handleImageClick = (image) => {
@@ -47,13 +41,13 @@ export const Gallery = () => {
 
                 <div className="gallery-grid">
                     {galleryImages.map((image) => (
-                        <div 
-                            key={image.id} 
+                        <div
+                            key={image.id}
                             className="gallery-item"
                             onClick={() => handleImageClick(image)}
                         >
-                            <img 
-                                src={image.src} 
+                            <img
+                                src={image.src}
                                 alt={image.title}
                                 className="gallery-image"
                             />
@@ -69,10 +63,10 @@ export const Gallery = () => {
             </Container>
 
             {/* Modal para ver imagen en grande */}
-            <Modal 
-                show={showModal} 
-                onHide={handleClose} 
-                centered 
+            <Modal
+                show={showModal}
+                onHide={handleClose}
+                centered
                 size="lg"
                 className="gallery-modal"
             >
@@ -81,8 +75,8 @@ export const Gallery = () => {
                 </Modal.Header>
                 <Modal.Body className="p-0">
                     {selectedImage && (
-                        <img 
-                            src={selectedImage.src} 
+                        <img
+                            src={selectedImage.src}
                             alt={selectedImage.title}
                             className="w-100"
                         />
