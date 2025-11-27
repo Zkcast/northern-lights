@@ -1,5 +1,4 @@
 import React from 'react'
-import photo3 from '../../Assets/slider/photo3.jpg'
 import { Col, Row } from 'react-bootstrap'
 import './Details.css'
 
