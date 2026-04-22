@@ -1,4 +1,8 @@
 :root {
+  --layout-max: 1320px;
+  --layout-pad-x: clamp(1.5rem, 5vw, 4rem);
+  --section-pad-y: clamp(3.5rem, 8vw, 6.5rem);
+
   /* Neon Colors */
   --neon-pink: #ff00b7;
   --neon-purple: #b700ff;

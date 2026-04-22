@@ -1,0 +1,210 @@
+.brands {
+  position: relative;
+  padding: var(--section-pad-y) var(--layout-pad-x);
+  background: linear-gradient(180deg, #05030c 0%, #0a0714 50%, #080612 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.brands::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.12),
+    rgba(180, 160, 255, 0.2),
+    rgba(255, 255, 255, 0.12),
+    transparent
+  );
+}
+
+.brands__inner {
+  max-width: var(--layout-max);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.brands__header {
+  text-align: center;
+  max-width: 40rem;
+  margin: 0 auto clamp(2.5rem, 5vw, 3.25rem);
+}
+
+.brands__kicker {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgba(200, 195, 220, 0.55);
+  margin: 0 0 0.85rem;
+}
+
+.brands__title {
+  font-size: clamp(1.35rem, 2.6vw, 1.75rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #f2f0fa;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.brands__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.65rem, 2vw, 1rem);
+}
+
+@media (min-width: 640px) {
+  .brands__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 992px) {
+  .brands__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 56rem;
+    margin: 0 auto;
+  }
+}
+
+.brands__cell {
+  margin: 0;
+}
+
+/* Cuadrado 1:1; misma foto, distinto encuadre vía object-position en el img */
+.brands__frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.35) inset,
+    0 18px 48px rgba(0, 0, 0, 0.45);
+  background: #0a0a0c;
+}
+
+.brands__frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 85% 65% at 50% 45%,
+    transparent 20%,
+    rgba(0, 0, 0, 0.25) 100%
+  );
+  z-index: 1;
+}
+
+.brands__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  display: block;
+  /* Escala ligera: al recortar distinto, la composición sigue “llena” el cuadrado */
+  transform: scale(1.08);
+  transform-origin: center;
+}
+
+.brands__glow {
+  position: absolute;
+  inset: -2px;
+  pointer-events: none;
+  z-index: 2;
+  box-shadow:
+    inset 0 0 48px rgba(255, 255, 255, 0.06),
+    inset 0 -20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Tarjetas mock: velo inferior para leer el nombre con seriedad */
+.brands__frame--mock .brands__glow {
+  background: linear-gradient(
+    180deg,
+    rgba(5, 5, 8, 0) 0%,
+    rgba(5, 5, 8, 0.2) 45%,
+    rgba(5, 5, 8, 0.82) 100%
+  );
+  box-shadow:
+    inset 0 0 36px rgba(255, 255, 255, 0.05),
+    inset 0 -24px 48px rgba(0, 0, 0, 0.65);
+}
+
+/* Don Rouch: un poco más de aire arriba que en mock, velo bajo legible con texto en card */
+.brands__frame--featured .brands__glow {
+  background: linear-gradient(
+    180deg,
+    rgba(5, 5, 8, 0) 0%,
+    rgba(5, 5, 8, 0.1) 42%,
+    rgba(5, 5, 8, 0.62) 78%,
+    rgba(5, 5, 8, 0.78) 100%
+  );
+}
+
+.brands__name {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  margin: 0;
+  padding: 0.65rem 0.5rem 0.75rem;
+  text-align: center;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(248, 246, 255, 0.95);
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.85),
+    0 0 20px rgba(255, 255, 255, 0.12);
+}
+
+/* Nombre siempre en la franja baja de la card */
+.brands__frame--mock .brands__name,
+.brands__frame--featured .brands__name {
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  color: rgba(255, 254, 255, 0.92);
+}
+
+.brands__frame--featured .brands__img {
+  transform: scale(1.03);
+}
+
+.brands__frame:hover .brands__img {
+  transform: scale(1.12);
+  transition: transform 0.45s ease;
+}
+
+.brands__frame--featured:hover .brands__img {
+  transform: scale(1.06);
+}
+
+.brands__frame .brands__img {
+  transition: transform 0.45s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brands__frame:hover .brands__img {
+    transform: scale(1.08);
+  }
+
+  .brands__frame--featured:hover .brands__img {
+    transform: scale(1.03);
+  }
+}
